@@ -260,7 +260,7 @@ def xchammer_dependencies():
     namespaced_git_repository(
         name = "Tulsi",
         remote = "https://github.com/pinterest/tulsi.git",
-        commit = "2fd83ec17e0d6e1efbb0ef6d6f73f622212dd38d",
+        commit = "0e16c8fb6a65037c30ebe9b896fc308fa3ea1cbd",
         patch_cmds = [
             """
          sed -i '' 's/\:__subpackages__/visibility\:public/g' src/TulsiGenerator/BUILD
@@ -271,7 +271,7 @@ def xchammer_dependencies():
         ],
     )
 
-    # This is a hack for XCHammer development, but is how XCHammer is imported 
+    # This is a hack for XCHammer development, but is how XCHammer is imported
     # into a workspace as a binary build
     new_git_repository(
         name = "xchammer_resources",
